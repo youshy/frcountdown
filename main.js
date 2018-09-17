@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     gradient.checkHour = (degree) => {
-        if ((gradient.nowHours > 0) && (gradient.nowHours < 5)) {
+        if ((gradient.nowHours >= 0) && (gradient.nowHours < 5)) {
             gradient.setGradient(degree, gradient.colours[0][0], gradient.colours[0][1], "white")
         } else if ((gradient.nowHours >= 5) && (gradient.nowHours < 10)) {
             gradient.setGradient(degree, gradient.colours[1][0], gradient.colours[1][1], "black")
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             gradient.setGradient(degree, gradient.colours[3][0], gradient.colours[3][1], "black")
         } else if ((gradient.nowHours >= 19) && (gradient.nowHours < 21)){
             gradient.setGradient(degree, gradient.colours[4][1], gradient.colours[4][0], "white")
-        } else if ((gradient.nowHours >= 21) && (gradient.nowHours < 23)) {
+        } else if ((gradient.nowHours >= 21) && (gradient.nowHours <= 23)) {
             gradient.setGradient(degree, gradient.colours[0][0], gradient.colours[0][1], "white")
         } 
     }

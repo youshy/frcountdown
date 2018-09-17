@@ -53,17 +53,20 @@ document.addEventListener("DOMContentLoaded", () => {
             gradient.setGradient(degree, gradient.colours[1][0], gradient.colours[1][1], "black")
         } else if ((gradient.nowHours > 10) && (gradient.nowHours < 16)) {
             gradient.setGradient(degree, gradient.colours[2][0], gradient.colours[2][1], "black")
-        } else if ((gradient.nowHours > 16) && (gradient.nowHours < 20)) {
+        } else if ((gradient.nowHours > 16) && (gradient.nowHours < 19)) {
             gradient.setGradient(degree, gradient.colours[3][0], gradient.colours[3][1], "black")
-        } else {
-            gradient.setGradient(degree, gradient.colours[4][0], gradient.colours[4][1], "white")
+        } else if ((gradient.nowHours > 19) && (gradient.nowHours < 21)){
+            gradient.setGradient(degree, gradient.colours[4][1], gradient.colours[4][0], "white")
+        } else if (gradient.nowHours > 21) {
+            gradient.setGradient(degree, gradient.colours[0][0], gradient.colours[0][1], "white")
         }
     }
 
-    let degree = -45
+    let degree = -(Math.random() * 46)
+    console.log(degree)
     let checker = setInterval(() => {
         gradient.nowHours = new Date().getHours()
-        let adder = 0.002
+        let adder = 0.001
         degree = (degree + adder)
         gradient.checkHour(degree) 
     }, 100)

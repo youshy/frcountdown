@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const gradient = {}
     gradient.colours = [
         //night
-        ["#0B0D10", "#05080D"],
+        ["#001C45", "#05080D"],
         //morning
         ["#0C2B5A", "#049AB6"],
         //day
@@ -49,17 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
     gradient.checkHour = (degree) => {
         if ((gradient.nowHours > 0) && (gradient.nowHours < 5)) {
             gradient.setGradient(degree, gradient.colours[0][0], gradient.colours[0][1], "white")
-        } else if ((gradient.nowHours > 5) && (gradient.nowHours < 10)) {
+        } else if ((gradient.nowHours >= 5) && (gradient.nowHours < 10)) {
             gradient.setGradient(degree, gradient.colours[1][0], gradient.colours[1][1], "black")
-        } else if ((gradient.nowHours > 10) && (gradient.nowHours < 16)) {
+        } else if ((gradient.nowHours >= 10) && (gradient.nowHours < 16)) {
             gradient.setGradient(degree, gradient.colours[2][0], gradient.colours[2][1], "black")
-        } else if ((gradient.nowHours > 16) && (gradient.nowHours < 19)) {
+        } else if ((gradient.nowHours >= 16) && (gradient.nowHours < 19)) {
             gradient.setGradient(degree, gradient.colours[3][0], gradient.colours[3][1], "black")
-        } else if ((gradient.nowHours > 19) && (gradient.nowHours < 21)){
+        } else if ((gradient.nowHours >= 19) && (gradient.nowHours < 21)){
             gradient.setGradient(degree, gradient.colours[4][1], gradient.colours[4][0], "white")
-        } else if (gradient.nowHours > 21) {
+        } else if ((gradient.nowHours >= 21) && (gradient.nowHours < 23)) {
             gradient.setGradient(degree, gradient.colours[0][0], gradient.colours[0][1], "white")
-        }
+        } 
     }
 
     let degree = -(Math.random() * 46)

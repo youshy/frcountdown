@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const count = {}
-    count.toDate = new Date("Apr 29, 2019, 09:30:00").getTime()
+    count.toDate = new Date("Jun 3, 2019, 11:00:00").getTime()
     count.setDate = document.getElementById("setdate").innerHTML = "Waiting for the trip:"
 
     let interval = setInterval(() => {

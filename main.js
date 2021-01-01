@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const count = {}
-    count.toDate = new Date("Jun 3, 2019, 11:00:00").getTime()
+    count.toDate = new Date("May 1, 2022, 11:00:00").getTime()
     count.setDate = document.getElementById("setdate").innerHTML = "Waiting for the trip:"
 
     let interval = setInterval(() => {
@@ -70,7 +70,4 @@ document.addEventListener("DOMContentLoaded", () => {
         degree = (degree + adder)
         gradient.checkHour(degree) 
     }, 100)
-
-
 })
-
